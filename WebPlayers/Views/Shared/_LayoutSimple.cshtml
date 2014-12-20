@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>VOD Demo Players</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+
+    @Styles.Render("~/Content/css")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/Scripts/knockout-postbox.js")
+
+    @Scripts.Render("~/bundles/app/common")
+
+    @RenderSection("Scripts", required: false)
+    
+    <style>
+        .container.alt,
+        footer,
+        .btn,
+        span {
+            display: none !important;
+        }
+        body,
+        .container,
+        #playerContainer {
+            background-color: black;
+        }
+        body,
+        html,
+        .container,
+        #player,
+        #playerContainer,
+        #videoPlayer {
+            width: 100% !important;
+            height: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        embed {
+            width: 100%; 
+            height: 100%;
+        }
+        html, body {
+            overflow: hidden;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <div class="container alt">
+        @Html.Partial("_AssetLibrary")
+    </div>
+    <script>
+        //$(document).ready(function () {
+        //    $("html, body, .container, #player, #playerContainer, #videoPlayer").height(document.documentElement.clientHeight);
+        //    $("html, body, .container, #player, #playerContainer, #videoPlayer").width(document.documentElement.clientWidth);
+        //    setTimeout(acomodoTamanio, 1000);
+        //});
+        //$(window).resize(function() {
+        //    $("html, body, .container, #player, #playerContainer, #videoPlayer").height(document.documentElement.clientHeight);
+        //    $("html, body, .container, #player, #playerContainer, #videoPlayer").width(document.documentElement.clientWidth);
+        //});
+        //function acomodoTamanio() {
+        //    console.log(document.documentElement.clientHeight);
+        //    $("html, body, .container, #player, #playerContainer, #videoPlayer").height(document.documentElement.clientHeight);
+        //    $("html, body, .container, #player, #playerContainer, #videoPlayer").width(document.documentElement.clientWidth);
+        //    setTimeout(acomodoTamanio, 1000);
+        //}
+    </script>
+</body>
+</html>
