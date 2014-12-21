@@ -12,7 +12,7 @@
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<Models.AzureMediaPortalContext>());
+            System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseAlways<Models.AzureMediaPortalContext>());
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
