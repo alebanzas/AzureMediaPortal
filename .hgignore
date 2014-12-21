@@ -30,3 +30,7 @@ packages/
 [Bb]ld
 *.orig
 Thumbs.db
+WebPlayers/App_Data/AzureMediaPortal_log.ldf
+WebPlayers/App_Data/AzureMediaPortal.mdf
+WebPlayers/App_Data/AzureMediaPortalContext_log.ldf
+WebPlayers/App_Data/AzureMediaPortalContext.mdf
