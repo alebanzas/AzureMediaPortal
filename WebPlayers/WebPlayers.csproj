@@ -337,6 +337,7 @@
       <DependentUpon>common.css</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\aleplayers.pubxml" />
+    <None Include="Properties\PublishProfiles\labtivi.pubxml" />
     <None Include="Properties\PublishProfiles\voddemoplayers-build2014 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\voddemoplayers-build2014 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
