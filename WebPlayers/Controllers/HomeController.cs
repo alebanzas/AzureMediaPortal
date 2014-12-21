@@ -6,12 +6,12 @@
     {
         public ActionResult Index()
         {
-            return View();
+            return View("Index", "_LayoutSimple");
         }
 
         public ActionResult Lista()
         {
-            return View();
+            return View("Index", "_LayoutPlayers");
         }
     }
 }

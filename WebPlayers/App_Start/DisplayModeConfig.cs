@@ -1,6 +1,5 @@
 ﻿namespace WebPlayers
 {
-    using System.Web.Mvc;
     using System.Web.WebPages;
 
     public class DisplayModeConfig

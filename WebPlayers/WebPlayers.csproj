@@ -398,7 +398,6 @@
     <Content Include="Views\Home\_Player.Apple.cshtml" />
     <Content Include="Views\Home\Index.WindowsPhone.cshtml" />
     <Content Include="Views\Home\_Player.WindowsPhone.cshtml" />
-    <Content Include="Views\Home\Android.cshtml" />
     <Content Include="Views\Shared\_LayoutSimple.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
