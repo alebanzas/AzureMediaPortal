@@ -227,6 +227,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\AzureMediaPortal.mdf" />
+    <Content Include="App_Data\AzureMediaPortalContext.mdf" />
+    <Content Include="App_Data\AzureMediaPortalContext_log.ldf">
+      <DependentUpon>AzureMediaPortalContext.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\AzureMediaPortal_log.ldf">
+      <DependentUpon>AzureMediaPortal.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\common.css">
       <DependentUpon>common.less</DependentUpon>
     </Content>
@@ -327,9 +335,7 @@
     <Content Include="Views\Media\Index.cshtml" />
     <Content Include="Views\Media\Upload.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
