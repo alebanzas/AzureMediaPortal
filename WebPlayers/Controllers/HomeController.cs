@@ -6,12 +6,12 @@
     {
         public ActionResult Index()
         {
-            return this.View();
+            return View();
         }
 
-        public ActionResult Android()
+        public ActionResult Lista()
         {
-            return this.View();
+            return View();
         }
     }
 }

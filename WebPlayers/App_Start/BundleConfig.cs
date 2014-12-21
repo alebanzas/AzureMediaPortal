@@ -38,6 +38,38 @@
 
             bundles.Add(new ScriptBundle("~/bundles/dash")
                 .Include("~/Scripts/dash/dash.js"));
+
+
+            //ADMIN
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+                        "~/Scripts/jquery-ui-{version}.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+                        "~/Scripts/jquery.unobtrusive*",
+                        "~/Scripts/jquery.validate*"));
+
+            // Use the development version of Modernizr to develop with and learn from. Then, when you're
+            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
+            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+                        "~/Scripts/modernizr-*"));
+
+            bundles.Add(new StyleBundle("~/Content/Admin/css").Include(
+                "~/Content/Admin/site.css",
+                "~/Content/Admin/playerframework.css"));
+
+            bundles.Add(new StyleBundle("~/Content/Admin/themes/base/css").Include(
+                        "~/Content/Admin/themes/base/jquery.ui.core.css",
+                        "~/Content/Admin/themes/base/jquery.ui.resizable.css",
+                        "~/Content/Admin/themes/base/jquery.ui.selectable.css",
+                        "~/Content/Admin/themes/base/jquery.ui.accordion.css",
+                        "~/Content/Admin/themes/base/jquery.ui.autocomplete.css",
+                        "~/Content/Admin/themes/base/jquery.ui.button.css",
+                        "~/Content/Admin/themes/base/jquery.ui.dialog.css",
+                        "~/Content/Admin/themes/base/jquery.ui.slider.css",
+                        "~/Content/Admin/themes/base/jquery.ui.tabs.css",
+                        "~/Content/Admin/themes/base/jquery.ui.datepicker.css",
+                        "~/Content/Admin/themes/base/jquery.ui.progressbar.css",
+                        "~/Content/Admin/themes/base/jquery.ui.theme.css"));
         }
     }
 }
