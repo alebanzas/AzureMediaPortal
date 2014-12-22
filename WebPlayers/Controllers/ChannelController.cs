@@ -51,6 +51,32 @@ namespace WebPlayers.Controllers
             return View("AddProgram", firstOrDefault);
         }
 
+        public ActionResult StartProgram(string id, string channel)
+        {
+            var firstOrDefault = _context.Channels.ToList().FirstOrDefault(x => x.Name == channel);
+            if (firstOrDefault == null)
+                return new HttpStatusCodeResult(404);
+
+            var program = firstOrDefault.Programs.ToList().FirstOrDefault(x => x.Name == id);
+
+            //programName.StartAsync();
+
+            return View("Programs", firstOrDefault);
+        }
+
+        public ActionResult StopProgram(string id, string channel)
+        {
+            var firstOrDefault = _context.Channels.ToList().FirstOrDefault(x => x.Name == channel);
+            if (firstOrDefault == null)
+                return new HttpStatusCodeResult(404);
+
+            var program = firstOrDefault.Programs.ToList().FirstOrDefault(x => x.Name == id);
+
+            //programName.StartAsync();
+
+            return View("Programs", firstOrDefault);
+        }
+
         public ActionResult Start(string id)
         {
             var firstOrDefault = _context.Channels.ToList().FirstOrDefault(x => x.Name == id);
