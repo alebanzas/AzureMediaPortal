@@ -14,7 +14,7 @@
     <header>
         <div class="content-wrapper">
             <div class="float-left">
-                <p class="site-title">@Html.ActionLink("My Media Portal", "Index", "Home")</p>
+                <p class="site-title">@Html.ActionLink("Portal Media", "Index", "Home")</p>
             </div>
             <div class="float-right">
                 <section id="login">
@@ -23,7 +23,8 @@
                 <nav>
                     <ul id="menu">
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("My Media", "Index", "Media")</li>
+                        <li>@Html.ActionLink("Videos", "Index", "Media")</li>
+                        <li>@Html.ActionLink("Canales", "Index", "Channel")</li>
                     </ul>
                 </nav>
             </div>
@@ -38,7 +39,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; @DateTime.Now.Year - My Media Portal</p>
+                <p>&copy; @DateTime.Now.Year - Portal Media</p>
             </div>
         </div>
     </footer>
