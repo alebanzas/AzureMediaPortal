@@ -23,9 +23,8 @@
             <td>@program.Created</td>
             <td></td>
             <td>
-                @Html.ActionLink("Start", "Start", "Channel", new { @id = program.Name, channel = Model.Name }, null)
-                @Html.ActionLink("Stop", "Stop", "Channel", new { @id = program.Name, channel = Model.Name }, null)
-                @Html.ActionLink("Reset", "Reset", "Channel", new { @id = program.Name, channel = Model.Name }, null)
+                @Html.ActionLink("Start", "StartProgram", "Channel", new { @id = program.Name, channel = Model.Name }, null)
+                @Html.ActionLink("Stop", "StopProgram", "Channel", new { @id = program.Name, channel = Model.Name }, null)
             </td>
         </tr>
         <tr>
