@@ -450,6 +450,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Channel\Index.cshtml" />
     <Content Include="Views\Channel\Programs.cshtml" />
+    <Content Include="Views\Channel\AddProgram.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
