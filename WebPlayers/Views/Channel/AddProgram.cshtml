@@ -1,8 +1,8 @@
-﻿@model Microsoft.WindowsAzure.MediaServices.Client.ChannelBaseCollection
+﻿@model Microsoft.WindowsAzure.MediaServices.Client.IChannel
 
 @{
     ViewBag.Title = "Nuevo programa";
     Layout = "../Shared/_Layout.cshtml";
 }
 
-<h2>Nuevo programa</h2>
+<h2>Nuevo programa - @Model.Name</h2>
