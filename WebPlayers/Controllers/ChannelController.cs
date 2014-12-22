@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using Microsoft.WindowsAzure.MediaServices.Client;
-using WebPlayers.Services;
 
 namespace WebPlayers.Controllers
 {
+    [Authorize]
     public class ChannelController : Controller
     {
         private const string MediaServicesAccountName = "MediaServicesAccountName";
