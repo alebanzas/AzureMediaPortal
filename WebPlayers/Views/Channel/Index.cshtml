@@ -1,0 +1,35 @@
+﻿@model Microsoft.WindowsAzure.MediaServices.Client.ChannelBaseCollection
+
+@{
+    ViewBag.Title = "Canales";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>Canales</h2>
+
+<table>
+    <tr style="font-weight: bold;">
+        <td>Nombre</td>
+        <td>Estado</td>
+        <td>Fecha</td>
+        <td>Programas</td>
+        <td>Acciones</td>
+    </tr>
+    @foreach (var channel in Model)
+{
+    <tr>
+        <td>@channel.Name</td>
+        <td>@channel.State</td>
+        <td>@channel.Created</td>
+        <td>@channel.Programs.Count() (@Html.ActionLink("Administrar", "Programs", "Channel", new { @id = channel.Name }, null))</td>
+        <td>
+            @Html.ActionLink("Start", "Start", "Channel", new { @id = channel.Name }, null)
+            @Html.ActionLink("Stop", "Stop", "Channel", new { @id = channel.Name }, null)
+            @Html.ActionLink("Reset", "Reset", "Channel", new { @id = channel.Name }, null)
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5">Ingesto: <a href="@channel.Input.Endpoints[0].Url.AbsoluteUri" onclick="return false;">@channel.Input.Endpoints[0].Url.AbsoluteUri</a></td>
+    </tr>
+}
+</table>

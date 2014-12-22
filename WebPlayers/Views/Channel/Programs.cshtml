@@ -1,0 +1,35 @@
+﻿@model Microsoft.WindowsAzure.MediaServices.Client.IChannel
+
+@{
+    ViewBag.Title = "Programas - " + Model.Name;
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>Programas - @Model.Name</h2>
+
+<table>
+    <tr style="font-weight: bold;">
+        <td>Nombre</td>
+        <td>Estado</td>
+        <td>Fecha</td>
+        <td>Programas</td>
+        <td>Acciones</td>
+    </tr>
+    @foreach (var program in Model.Programs)
+    {
+        <tr>
+            <td>@program.Name</td>
+            <td>@program.State</td>
+            <td>@program.Created</td>
+            <td></td>
+            <td>
+                @Html.ActionLink("Start", "Start", "Channel", new { @id = program.Name, channel = Model.Name }, null)
+                @Html.ActionLink("Stop", "Stop", "Channel", new { @id = program.Name, channel = Model.Name }, null)
+                @Html.ActionLink("Reset", "Reset", "Channel", new { @id = program.Name, channel = Model.Name }, null)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">Output: <a href="@program.Asset.Uri.AbsoluteUri" onclick="return false;">@program.Asset.Uri.AbsoluteUri</a></td>
+        </tr>
+    }
+</table>
