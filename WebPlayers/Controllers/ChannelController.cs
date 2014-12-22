@@ -50,7 +50,7 @@ namespace WebPlayers.Controllers
             if (firstOrDefault == null)
                 return new HttpStatusCodeResult(404);
 
-            return View("AddProgram", _context.Channels);
+            return View("AddProgram", firstOrDefault);
         }
 
         public ActionResult Start(string id)
